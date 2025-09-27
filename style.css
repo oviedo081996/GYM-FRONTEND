@@ -1,0 +1,364 @@
+/* ======================
+   FUENTES E IMPORTACIÓN
+====================== */
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;500;600&display=swap');
+
+/* ======================
+   VARIABLES GLOBALES
+====================== */
+:root {
+  --bg1: #151820;          /* Fondo 1 oscuro */
+  --bg2: #1f2134;          /* Fondo 2 menos oscuro */
+  --body-text-color: #F0F0F0;  /* Texto principal (casi blanco) */
+  --brand-color:orange; /* un naranja suave */
+ /* Naranja brillante */
+  --white-color: #FFF;     /* Blanco puro */
+}
+
+/* ======================
+   ESTILOS GLOBALES
+====================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--body-text-color);
+  background-color: var(--bg1);
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Dela Gothic One", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--white-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* ======================
+   NAVBAR
+====================== */
+.navbar {
+  background: linear-gradient(to bottom, #1B1F34, rgba(27, 31, 52, 0.2));
+}
+
+.navbar-brand {
+  font-family: "Dela Gothic One", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 32px;
+}
+
+.navbar .nav-link {
+  color: var(--white-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--brand-color);
+}
+
+/* ======================
+   HERO SECTION
+====================== */
+#hero {
+  background: linear-gradient(to right, #1B1F34, rgba(27, 31, 52, 0.0)), url('imagenes/pexels-murry-29221190.jpg');
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+
+#hero p {
+  margin: 24px 0;
+}
+
+/* ======================
+   BOTONES
+====================== */
+.btn {
+  padding: 16px 36px;
+  font-family: "Dela Gothic One", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-brand {
+  background-color: var(--brand-color);
+  color: black;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: transparent;
+  color: var(--brand-color);
+  border: 2px solid var(--brand-color);
+}
+
+.btn-outline-brand {
+  background-color: transparent;
+  color: var(--brand-color);
+  border: 2px solid var(--brand-color);
+}
+
+.btn-outline-brand:hover,
+.btn-outline-brand:focus {
+  background-color: var(--brand-color);
+  color: black;
+}
+
+/* ======================
+   ACERCA DE NOSOTROS
+====================== */
+.text-brand {
+  color: var(--brand-color);
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+.card {
+  background-color: var(--bg2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bg-custom-dark {
+  background-color: var(--bg1);
+}
+
+/* ======================
+   SERVICIOS
+====================== */
+/* PENDIENTE DE ESTILOS */
+
+/* ======================
+   HORARIOS
+====================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+}
+
+table th,
+table td {
+  border: 1px solid #333;
+  padding: 16px 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background-color: var(--brand-color);
+  color: #000;
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 160, 122, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.col-lg-6.fade-in.d-flex {
+  min-height: 350px;
+}
+
+.text-secondary.mt-3 {
+  font-size: 0.9rem;
+  font-style: italic;
+  max-width: 100%;
+}
+
+/* ======================
+   PRECIOS
+====================== */
+.card-title.text-danger {
+  color: var(--brand-color) !important;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+}
+
+/* PENDIENTE DE ESTILOS */
+
+/* ======================
+   EQUIPO
+====================== */
+.team-card {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.02);
+}
+
+.team-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+.team-name {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-family: "Dela Gothic One", sans-serif;
+  text-align: center;
+}
+
+.social-icons a {
+  color: var(--brand-color);
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+}
+
+/* ======================
+   CONTACTO
+====================== */
+.social-links a {
+  color: var(--brand-color);
+  font-size: 1.5rem;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: white;
+}
+
+/* Redes Sociales Individuales */
+.instagram { color: #E1306C; }
+.instagram:hover { color: #C13584; }
+
+.facebook { color: #3b5998; }
+.facebook:hover { color: #2d4373; }
+
+.whatsapp { color: #25D366; }
+.whatsapp:hover { color: #128C7E; }
+
+/* ======================
+   BOTÓN FLOTANTE WHATSAPP
+====================== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+
+/* ======================
+   ANIMACIONES Y EFECTOS
+====================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======================
+   HOVERS REDES SOCIALES
+====================== */
+.social-icons a.facebook:hover,
+.social-links a.facebook:hover {
+  color: #1877F2;
+}
+
+.social-icons a.instagram:hover,
+.social-links a.instagram:hover {
+  color: #E4405F;
+}
+
+.social-icons a.linkedin:hover,
+.social-links a.linkedin:hover {
+  color: #0A66C2;
+}
+
+
+.input-error {
+  border: 2px solid red !important;
+}
+
+.input-error {
+ border: 2px solid red !important;
+}
+
+/*para que el navbar no quede trasparente*/
+.navbar {
+  background-color: #1B1F34 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/*para formulario si los campos estan validos*/
+
+.input-success {
+  border: 2px solid #25D366 !important;
+}
+
+
+@media (max-width: 767px) {
+  section {
+    padding: 60px 0;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+}
